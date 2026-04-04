@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Meeples vs Models</title>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="#0c1120" stroke="rgba(255,255,255,0.13)" />
+  <g stroke="rgba(221,225,236,0.12)" stroke-width="1">
+    <path d="M18 14v36" />
+    <path d="M32 14v36" />
+    <path d="M46 14v36" />
+    <path d="M14 18h36" />
+    <path d="M14 32h36" />
+    <path d="M14 46h36" />
+  </g>
+  <path
+    d="M20.4 20.8a5.8 5.8 0 1 1 11.6 0 5.8 5.8 0 0 1-11.6 0Zm-4.9 23.1c0-7 3.8-11.5 7.1-12.2l-1.9 11.1h11l-1.9-11.1c3.4.7 7.2 5.2 7.2 12.2H15.5Z"
+    fill="#e8b96a"
+  />
+  <path d="M38.5 19.5 47 24.5l-8.5 5-8.5-5 8.5-5Z" fill="#8b7cf8" opacity="0.95" />
+  <path d="M38.5 34.5 47 39.5l-8.5 5-8.5-5 8.5-5Z" fill="#8b7cf8" opacity="0.72" />
+  <path d="M38.5 24.5v10M30 29.5v10M47 24.5v10" stroke="#b2a8fb" stroke-width="2" stroke-linecap="round" />
+</svg>

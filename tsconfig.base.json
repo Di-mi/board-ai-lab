@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "lib": ["ES2022", "DOM"],
+    "paths": {
+      "@board-ai-lab/onitama-engine": ["packages/onitama-engine/src/index.ts"],
+      "@board-ai-lab/onitama-play": ["packages/onitama-play/src/index.ts"],
+      "@board-ai-lab/hive-engine": ["packages/hive-engine/src/index.ts"],
+      "@board-ai-lab/hive-play": ["packages/hive-play/src/index.ts"],
+      "@board-ai-lab/hive-ga": ["packages/hive-ga/src/index.ts"],
+      "@board-ai-lab/agents-random": ["packages/agents-random/src/index.ts"],
+      "@board-ai-lab/agents-ga": ["packages/agents-ga/src/index.ts"],
+      "@board-ai-lab/agents-llm": ["packages/agents-llm/src/index.ts"],
+      "@board-ai-lab/replay-artifacts": ["packages/replay-artifacts/src/index.ts"]
+    }
+  }
+}

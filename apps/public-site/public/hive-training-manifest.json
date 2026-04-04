@@ -1,0 +1,202 @@
+[
+  {
+    "runId": "hive-train-1774690000-splitpromo",
+    "createdAtIso": "1970-01-21T12:58:10.000Z",
+    "fitness": 1.1887500000000002,
+    "weights": {
+      "queenPressure": 1.8548265038290994,
+      "queenLiberties": 2.639394910214469,
+      "mobility": 0.11810506146866828,
+      "reserveDevelopment": 0.36165698086842896,
+      "placementFreedom": 0.3755259964498691,
+      "stackControl": 1.1676561115309596,
+      "contactPressure": 0.44674265312496575,
+      "queenClosurePotential": 0.26972889504395425,
+      "beetlePressure": 1.393923986586742,
+      "queenRingQuality": 1.7972502258606253,
+      "queenTiming": 1.724780436954461,
+      "surroundLeverage": 1.3568674750858918,
+      "beetleLock": 2.1901817104313523
+    }
+  },
+  {
+    "runId": "hive-train-1774681158-depth2-continue3-daemon-real",
+    "createdAtIso": "1970-01-21T12:58:01.158Z",
+    "fitness": 1.1887500000000002,
+    "weights": {
+      "queenPressure": 1.8548265038290994,
+      "queenLiberties": 2.639394910214469,
+      "mobility": 0.11810506146866828,
+      "reserveDevelopment": 0.36165698086842896,
+      "placementFreedom": 0.3755259964498691,
+      "stackControl": 1.1676561115309596,
+      "contactPressure": 0.44674265312496575,
+      "queenClosurePotential": 0.26972889504395425,
+      "beetlePressure": 1.393923986586742,
+      "queenRingQuality": 1.7972502258606253,
+      "queenTiming": 1.724780436954461,
+      "surroundLeverage": 1.3568674750858918,
+      "beetleLock": 2.1901817104313523
+    }
+  },
+  {
+    "runId": "hive-train-1774651346-depth2-featured",
+    "createdAtIso": "1970-01-21T12:57:31.346Z",
+    "fitness": 1.18875,
+    "weights": {
+      "queenPressure": 1.8548265038290994,
+      "queenLiberties": 2.639394910214469,
+      "mobility": 0.11810506146866828,
+      "reserveDevelopment": 0.36165698086842896,
+      "placementFreedom": 0.3755259964498691,
+      "stackControl": 1.1676561115309596,
+      "contactPressure": 0.44674265312496575,
+      "queenClosurePotential": 0.26972889504395425,
+      "beetlePressure": 1.393923986586742,
+      "queenRingQuality": 1.7972502258606253,
+      "queenTiming": 1.724780436954461,
+      "surroundLeverage": 1.3568674750858918,
+      "beetleLock": 2.1901817104313523
+    }
+  },
+  {
+    "runId": "hive-train-1774507376-depth2-parallel",
+    "createdAtIso": "1970-01-21T12:55:07.376Z",
+    "fitness": 1.17375,
+    "weights": {
+      "queenPressure": 0.5139410714618862,
+      "queenLiberties": 1.178382933139801,
+      "mobility": 1.2681923643685877,
+      "reserveDevelopment": 1.3117084605619311,
+      "placementFreedom": 2.941724685486406,
+      "stackControl": -0.30148290283977985,
+      "contactPressure": -2.4124415474943817,
+      "queenClosurePotential": -1.8504352485761046,
+      "beetlePressure": -0.3157283035106957,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774469536-depth2logged",
+    "createdAtIso": "1970-01-21T12:54:29.536Z",
+    "fitness": 1,
+    "weights": {
+      "queenPressure": -0.19846626045182347,
+      "queenLiberties": -2.635770734399557,
+      "mobility": -2.8652685857377946,
+      "reserveDevelopment": 0.223732634447515,
+      "placementFreedom": 1.9797615869902074,
+      "stackControl": 2.07199271209538,
+      "contactPressure": 1.0855083991773427,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774336386691-6f575386",
+    "createdAtIso": "2026-03-24T07:13:06.691Z",
+    "fitness": 0.75,
+    "weights": {
+      "queenPressure": -2.2892399774864316,
+      "queenLiberties": 2.2428822345100343,
+      "mobility": 2.967805651947856,
+      "reserveDevelopment": 2.1192163419909775,
+      "placementFreedom": -0.0019396310672163963,
+      "stackControl": 0.8520056786946952,
+      "contactPressure": 2.1687371246516705,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774336216594-ed588996",
+    "createdAtIso": "2026-03-24T07:10:16.594Z",
+    "fitness": 0.75,
+    "weights": {
+      "queenPressure": -2.8048180721433447,
+      "queenLiberties": 1.71947533740371,
+      "mobility": 0.9444645123080617,
+      "reserveDevelopment": 0.9975009883782868,
+      "placementFreedom": 0.2880654361757933,
+      "stackControl": 0.47791820462955914,
+      "contactPressure": 3.6394713199543745,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774249511386-325b414d",
+    "createdAtIso": "2026-03-23T07:05:11.386Z",
+    "fitness": 1,
+    "weights": {
+      "queenPressure": 2.4,
+      "queenLiberties": 1.8,
+      "mobility": 0.7,
+      "reserveDevelopment": 0.6,
+      "placementFreedom": 0.45,
+      "stackControl": 0.8,
+      "contactPressure": 0.7,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774249450179-f60525b8",
+    "createdAtIso": "2026-03-23T07:04:10.179Z",
+    "fitness": 0.75,
+    "weights": {
+      "queenPressure": -2.2892399774864316,
+      "queenLiberties": 2.2428822345100343,
+      "mobility": 2.967805651947856,
+      "reserveDevelopment": 2.1192163419909775,
+      "placementFreedom": -0.0019396310672163963,
+      "stackControl": 0.8520056786946952,
+      "contactPressure": 2.1687371246516705,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  },
+  {
+    "runId": "hive-train-1774249399977-5e1bba79",
+    "createdAtIso": "2026-03-23T07:03:19.977Z",
+    "fitness": 0.875,
+    "weights": {
+      "queenPressure": -2.190533072540434,
+      "queenLiberties": 0.3022521918574723,
+      "mobility": 0.871377355598853,
+      "reserveDevelopment": -1.115809964265881,
+      "placementFreedom": 0.2812853533077566,
+      "stackControl": 1.2287390028548222,
+      "contactPressure": 1.5656083963630965,
+      "queenClosurePotential": 1,
+      "beetlePressure": 1.3,
+      "queenRingQuality": 1.2,
+      "queenTiming": 0.9,
+      "surroundLeverage": 1.5,
+      "beetleLock": 2.2
+    }
+  }
+]

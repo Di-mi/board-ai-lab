@@ -1,0 +1,1511 @@
+{
+  "runId": "train-1772878297644",
+  "createdAtIso": "2026-03-07T10:11:37.644Z",
+  "matches": [
+    {
+      "kind": "longest",
+      "label": "Longest match",
+      "replay": {
+        "replayId": "g20-31-g20-game-6",
+        "startedAtIso": "2026-03-07T10:18:37.014Z",
+        "seed": 900031006,
+        "generation": 20,
+        "genomeId": "g20-31",
+        "gameIndex": 6,
+        "players": {
+          "red": "g20-31",
+          "blue": "g20-11"
+        },
+        "winner": "blue",
+        "winReason": "temple-arch",
+        "turns": [
+          {
+            "turn": 0,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 1,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|0|dragon,rabbit|horse,monkey|boar|bSbSbMbSbS..............................rSrSrMrSrS|none|none",
+            "stateHashAfter": "blue|1|dragon,boar|horse,monkey|rabbit|bSbSbMbSbS........................rS....rS..rMrSrS|none|none"
+          },
+          {
+            "turn": 1,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 2,
+                "y": 0
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|1|dragon,boar|horse,monkey|rabbit|bSbSbMbSbS........................rS....rS..rMrSrS|none|none",
+            "stateHashAfter": "red|2|dragon,boar|rabbit,monkey|horse|bSbS..bSbS....bM..................rS....rS..rMrSrS|none|none"
+          },
+          {
+            "turn": 2,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 3,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|2|dragon,boar|rabbit,monkey|horse|bSbS..bSbS....bM..................rS....rS..rMrSrS|none|none",
+            "stateHashAfter": "blue|3|dragon,horse|rabbit,monkey|boar|bSbS..bSbS....bM..................rSrS..rS..rM..rS|none|none"
+          },
+          {
+            "turn": 3,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 4,
+                "y": 0
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|3|dragon,horse|rabbit,monkey|boar|bSbS..bSbS....bM..................rSrS..rS..rM..rS|none|none",
+            "stateHashAfter": "red|4|dragon,horse|boar,monkey|rabbit|bSbS..bS......bMbS................rSrS..rS..rM..rS|none|none"
+          },
+          {
+            "turn": 4,
+            "player": "red",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 3,
+                "y": 3
+              },
+              "to": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|4|dragon,horse|boar,monkey|rabbit|bSbS..bS......bMbS................rSrS..rS..rM..rS|none|none",
+            "stateHashAfter": "blue|5|rabbit,horse|boar,monkey|dragon|bSbS..bS......bMbS....rS..........rS....rS..rM..rS|none|none"
+          },
+          {
+            "turn": 5,
+            "player": "blue",
+            "move": {
+              "card": "monkey",
+              "from": {
+                "x": 2,
+                "y": 1
+              },
+              "to": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|5|rabbit,horse|boar,monkey|dragon|bSbS..bS......bMbS....rS..........rS....rS..rM..rS|none|none",
+            "stateHashAfter": "red|6|rabbit,horse|boar,dragon|monkey|bSbS..bS........bS....bM..........rS....rS..rM..rS|none|none"
+          },
+          {
+            "turn": 6,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 0,
+                "y": 4
+              },
+              "to": {
+                "x": 1,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|6|rabbit,horse|boar,dragon|monkey|bSbS..bS........bS....bM..........rS....rS..rM..rS|none|none",
+            "stateHashAfter": "blue|7|monkey,horse|boar,dragon|rabbit|bSbS..bS........bS....bM........rSrS........rM..rS|none|none"
+          },
+          {
+            "turn": 7,
+            "player": "blue",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 1,
+                "y": 2
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|7|monkey,horse|boar,dragon|rabbit|bSbS..bS........bS....bM........rSrS........rM..rS|none|none",
+            "stateHashAfter": "red|8|monkey,horse|boar,rabbit|dragon|bSbS..bS......bMbS..............rSrS........rM..rS|none|none"
+          },
+          {
+            "turn": 8,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 4,
+                "y": 4
+              },
+              "to": {
+                "x": 4,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|8|monkey,horse|boar,rabbit|dragon|bSbS..bS......bMbS..............rSrS........rM..rS|none|none",
+            "stateHashAfter": "blue|9|monkey,dragon|boar,rabbit|horse|bSbS..bS......bMbS..............rSrS..rS....rM....|none|none"
+          },
+          {
+            "turn": 9,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|9|monkey,dragon|boar,rabbit|horse|bSbS..bS......bMbS..............rSrS..rS....rM....|none|none",
+            "stateHashAfter": "red|10|monkey,dragon|boar,horse|rabbit|bSbS..bS......bM........bS......rSrS..rS....rM....|none|none"
+          },
+          {
+            "turn": 10,
+            "player": "red",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 4,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|10|monkey,dragon|boar,horse|rabbit|bSbS..bS......bM........bS......rSrS..rS....rM....|none|none",
+            "stateHashAfter": "blue|11|monkey,rabbit|boar,horse|dragon|bSbS..bS......bM........rS......rSrS........rM....|none|none"
+          },
+          {
+            "turn": 11,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 0,
+                "y": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|11|monkey,rabbit|boar,horse|dragon|bSbS..bS......bM........rS......rSrS........rM....|none|none",
+            "stateHashAfter": "red|12|monkey,rabbit|boar,dragon|horse|..bS..bS..bS..bM........rS......rSrS........rM....|none|none"
+          },
+          {
+            "turn": 12,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|12|monkey,rabbit|boar,dragon|horse|..bS..bS..bS..bM........rS......rSrS........rM....|none|none",
+            "stateHashAfter": "blue|13|monkey,horse|boar,dragon|rabbit|..bS..bS..bS..bM........rS......rSrSrM............|none|none"
+          },
+          {
+            "turn": 13,
+            "player": "blue",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 0,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|13|monkey,horse|boar,dragon|rabbit|..bS..bS..bS..bM........rS......rSrSrM............|none|none",
+            "stateHashAfter": "red|14|monkey,horse|boar,rabbit|dragon|..bS..bS......bM........bS......rSrSrM............|none|none"
+          },
+          {
+            "turn": 14,
+            "player": "red",
+            "move": {
+              "card": "monkey",
+              "from": {
+                "x": 1,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|14|monkey,horse|boar,rabbit|dragon|..bS..bS......bM........bS......rSrSrM............|none|none",
+            "stateHashAfter": "blue|15|dragon,horse|boar,rabbit|monkey|..bS..bS......bM........rS........rSrM............|none|none"
+          },
+          {
+            "turn": 15,
+            "player": "blue",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 2,
+                "y": 1
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|15|dragon,horse|boar,rabbit|monkey|..bS..bS......bM........rS........rSrM............|none|none",
+            "stateHashAfter": "red|16|dragon,horse|monkey,rabbit|boar|..bS..bS........bM......rS........rSrM............|none|none"
+          },
+          {
+            "turn": 16,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|16|dragon,horse|monkey,rabbit|boar|..bS..bS........bM......rS........rSrM............|none|none",
+            "stateHashAfter": "blue|17|dragon,boar|monkey,rabbit|horse|..bS..bS........bM....rS..........rSrM............|none|none"
+          },
+          {
+            "turn": 17,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 4,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "blue|17|dragon,boar|monkey,rabbit|horse|..bS..bS........bM....rS..........rSrM............|none|none",
+            "stateHashAfter": "red|18|dragon,boar|monkey,horse|rabbit|..bS..bSbM............rS..........rSrM............|none|none"
+          },
+          {
+            "turn": 18,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 1,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|18|dragon,boar|monkey,horse|rabbit|..bS..bSbM............rS..........rSrM............|none|none",
+            "stateHashAfter": "blue|19|dragon,rabbit|monkey,horse|boar|..bS..bSbM............rS........rS..rM............|none|none"
+          },
+          {
+            "turn": 19,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 1,
+                "y": 0
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|19|dragon,rabbit|monkey,horse|boar|..bS..bSbM............rS........rS..rM............|none|none",
+            "stateHashAfter": "red|20|dragon,rabbit|monkey,boar|horse|......bSbM..bS........rS........rS..rM............|none|none"
+          },
+          {
+            "turn": 20,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 1,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|20|dragon,rabbit|monkey,boar|horse|......bSbM..bS........rS........rS..rM............|none|none",
+            "stateHashAfter": "blue|21|dragon,horse|monkey,boar|rabbit|......bSbM..bS............rS....rS..rM............|none|none"
+          },
+          {
+            "turn": 21,
+            "player": "blue",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 1,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|21|dragon,horse|monkey,boar|rabbit|......bSbM..bS............rS....rS..rM............|none|none",
+            "stateHashAfter": "red|22|dragon,horse|monkey,rabbit|boar|......bSbM....bS..........rS....rS..rM............|none|none"
+          },
+          {
+            "turn": 22,
+            "player": "red",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 3,
+                "y": 2
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "red|22|dragon,horse|monkey,rabbit|boar|......bSbM....bS..........rS....rS..rM............|none|none",
+            "stateHashAfter": "blue|23|boar,horse|monkey,rabbit|dragon|......bSbM..rSbS................rS..rM............|none|none"
+          },
+          {
+            "turn": 23,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 4,
+                "y": 0
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|23|boar,horse|monkey,rabbit|dragon|......bSbM..rSbS................rS..rM............|none|none",
+            "stateHashAfter": "red|24|boar,horse|monkey,dragon|rabbit|......bS....rSbSbM..............rS..rM............|none|none"
+          },
+          {
+            "turn": 24,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 1,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "red|24|boar,horse|monkey,dragon|rabbit|......bS....rSbSbM..............rS..rM............|none|none",
+            "stateHashAfter": "blue|25|rabbit,horse|monkey,dragon|boar|......bS......rSbM..............rS..rM............|none|none"
+          },
+          {
+            "turn": 25,
+            "player": "blue",
+            "move": {
+              "card": "monkey",
+              "from": {
+                "x": 3,
+                "y": 0
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|25|rabbit,horse|monkey,dragon|boar|......bS......rSbM..............rS..rM............|none|none",
+            "stateHashAfter": "red|26|rabbit,horse|boar,dragon|monkey|..............bSbM..............rS..rM............|none|none"
+          },
+          {
+            "turn": 26,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 1,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|26|rabbit,horse|boar,dragon|monkey|..............bSbM..............rS..rM............|none|none",
+            "stateHashAfter": "blue|27|monkey,horse|boar,dragon|rabbit|..............bSbM......rS..........rM............|none|none"
+          },
+          {
+            "turn": 27,
+            "player": "blue",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 2,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|27|monkey,horse|boar,dragon|rabbit|..............bSbM......rS..........rM............|none|none",
+            "stateHashAfter": "red|28|monkey,horse|rabbit,dragon|boar|................bM......bS..........rM............|none|none"
+          },
+          {
+            "turn": 28,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|28|monkey,horse|rabbit,dragon|boar|................bM......bS..........rM............|none|none",
+            "stateHashAfter": "blue|29|monkey,boar|rabbit,dragon|horse|................bM......bS........rM..............|none|none"
+          },
+          {
+            "turn": 29,
+            "player": "blue",
+            "move": {
+              "card": "dragon",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 0,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "blue|29|monkey,boar|rabbit,dragon|horse|................bM......bS........rM..............|none|none",
+            "stateHashAfter": "red|30|monkey,boar|rabbit,horse|dragon|................bM............bS..rM..............|none|none"
+          },
+          {
+            "turn": 30,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|30|monkey,boar|rabbit,horse|dragon|................bM............bS..rM..............|none|none",
+            "stateHashAfter": "blue|31|monkey,dragon|rabbit,horse|boar|................bM............bS....rM............|none|none"
+          },
+          {
+            "turn": 31,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|31|monkey,dragon|rabbit,horse|boar|................bM............bS....rM............|none|none",
+            "stateHashAfter": "red|32|monkey,dragon|rabbit,boar|horse|..........................bM..bS....rM............|none|none"
+          },
+          {
+            "turn": 32,
+            "player": "red",
+            "move": {
+              "card": "monkey",
+              "from": {
+                "x": 3,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|32|monkey,dragon|rabbit,boar|horse|..........................bM..bS....rM............|none|none",
+            "stateHashAfter": "blue|33|horse,dragon|rabbit,boar|monkey|..........................bM..bS............rM....|none|none"
+          },
+          {
+            "turn": 33,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 0,
+                "y": 3
+              },
+              "to": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|33|horse,dragon|rabbit,boar|monkey|..........................bM..bS............rM....|none|none",
+            "stateHashAfter": "red|34|horse,dragon|monkey,boar|rabbit|......................bS..bM................rM....|none|none"
+          },
+          {
+            "turn": 34,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 1,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|34|horse,dragon|monkey,boar|rabbit|......................bS..bM................rM....|none|none",
+            "stateHashAfter": "blue|35|rabbit,dragon|monkey,boar|horse|......................bS..bM..............rM......|none|none"
+          },
+          {
+            "turn": 35,
+            "player": "blue",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 3,
+                "y": 2
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|35|rabbit,dragon|monkey,boar|horse|......................bS..bM..............rM......|none|none",
+            "stateHashAfter": "red|36|rabbit,dragon|monkey,horse|boar|......................bSbM................rM......|none|none"
+          },
+          {
+            "turn": 36,
+            "player": "red",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 1,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|36|rabbit,dragon|monkey,horse|boar|......................bSbM................rM......|none|none",
+            "stateHashAfter": "blue|37|boar,dragon|monkey,horse|rabbit|......................bSbM....................rM..|none|none"
+          },
+          {
+            "turn": 37,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 1,
+                "y": 2
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|37|boar,dragon|monkey,horse|rabbit|......................bSbM....................rM..|none|none",
+            "stateHashAfter": "red|38|boar,dragon|monkey,rabbit|horse|............bS..........bM....................rM..|none|none"
+          },
+          {
+            "turn": 38,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 3,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|38|boar,dragon|monkey,rabbit|horse|............bS..........bM....................rM..|none|none",
+            "stateHashAfter": "blue|39|horse,dragon|monkey,rabbit|boar|............bS..........bM..................rM....|none|none"
+          },
+          {
+            "turn": 39,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 1,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "blue|39|horse,dragon|monkey,rabbit|boar|............bS..........bM..................rM....|none|none",
+            "stateHashAfter": "red|40|horse,dragon|monkey,boar|rabbit|............bS..................bM..........rM....|none|none"
+          },
+          {
+            "turn": 40,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 1,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|40|horse,dragon|monkey,boar|rabbit|............bS..................bM..........rM....|none|none",
+            "stateHashAfter": "blue|41|rabbit,dragon|monkey,boar|horse|............bS..................bM........rM......|none|none"
+          },
+          {
+            "turn": 41,
+            "player": "blue",
+            "move": {
+              "card": "monkey",
+              "from": {
+                "x": 1,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "blue|41|rabbit,dragon|monkey,boar|horse|............bS..................bM........rM......|none|none",
+            "stateHashAfter": "red|42|rabbit,dragon|horse,boar|monkey|............bS............................rMbM....|blue|temple-arch"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "shortest-decisive",
+      "label": "Shortest decisive match",
+      "replay": {
+        "replayId": "g20-31-g20-game-8",
+        "startedAtIso": "2026-03-07T10:18:37.072Z",
+        "seed": 900031008,
+        "generation": 20,
+        "genomeId": "g20-31",
+        "gameIndex": 8,
+        "players": {
+          "red": "g20-31",
+          "blue": "random-b-4"
+        },
+        "winner": "red",
+        "winReason": "captured-master",
+        "turns": [
+          {
+            "turn": 0,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|0|horse,boar|rabbit,tiger|elephant|bSbSbMbSbS..............................rSrSrMrSrS|none|none",
+            "stateHashAfter": "blue|1|elephant,boar|rabbit,tiger|horse|bSbSbMbSbS..........................rS..rSrSrM..rS|none|none"
+          },
+          {
+            "turn": 1,
+            "player": "blue",
+            "move": {
+              "card": "tiger",
+              "from": {
+                "x": 4,
+                "y": 0
+              },
+              "to": {
+                "x": 4,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|1|elephant,boar|rabbit,tiger|horse|bSbSbMbSbS..........................rS..rSrSrM..rS|none|none",
+            "stateHashAfter": "red|2|elephant,boar|rabbit,horse|tiger|bSbSbMbS....................bS......rS..rSrSrM..rS|none|none"
+          },
+          {
+            "turn": 2,
+            "player": "red",
+            "move": {
+              "card": "boar",
+              "from": {
+                "x": 1,
+                "y": 4
+              },
+              "to": {
+                "x": 1,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|2|elephant,boar|rabbit,horse|tiger|bSbSbMbS....................bS......rS..rSrSrM..rS|none|none",
+            "stateHashAfter": "blue|3|elephant,tiger|rabbit,horse|boar|bSbSbMbS....................bS..rS..rS..rS..rM..rS|none|none"
+          },
+          {
+            "turn": 3,
+            "player": "blue",
+            "move": {
+              "card": "rabbit",
+              "from": {
+                "x": 2,
+                "y": 0
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|3|elephant,tiger|rabbit,horse|boar|bSbSbMbS....................bS..rS..rS..rS..rM..rS|none|none",
+            "stateHashAfter": "red|4|elephant,tiger|boar,horse|rabbit|bSbS..bS....bM..............bS..rS..rS..rS..rM..rS|none|none"
+          },
+          {
+            "turn": 4,
+            "player": "red",
+            "move": {
+              "card": "tiger",
+              "from": {
+                "x": 1,
+                "y": 3
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "red|4|elephant,tiger|boar,horse|rabbit|bSbS..bS....bM..............bS..rS..rS..rS..rM..rS|none|none",
+            "stateHashAfter": "blue|5|elephant,rabbit|boar,horse|tiger|bSbS..bS....rS..............bS......rS..rS..rM..rS|red|captured-master"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "rivalry",
+      "label": "Rivalry match",
+      "replay": {
+        "replayId": "g20-31-g20-game-10",
+        "startedAtIso": "2026-03-07T10:18:37.083Z",
+        "seed": 900031010,
+        "generation": 20,
+        "genomeId": "g20-31",
+        "gameIndex": 10,
+        "players": {
+          "red": "g20-31",
+          "blue": "previous-champion"
+        },
+        "winner": "red",
+        "winReason": "temple-arch",
+        "turns": [
+          {
+            "turn": 0,
+            "player": "blue",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 0,
+                "y": 0
+              },
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|0|crab,horse|goose,elephant|crane|bSbSbMbSbS..............................rSrSrMrSrS|none|none",
+            "stateHashAfter": "red|1|crab,horse|crane,elephant|goose|..bSbMbSbS..bS..........................rSrSrMrSrS|none|none"
+          },
+          {
+            "turn": 1,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|1|crab,horse|crane,elephant|goose|..bSbMbSbS..bS..........................rSrSrMrSrS|none|none",
+            "stateHashAfter": "blue|2|crab,goose|crane,elephant|horse|..bSbMbSbS..bS....................rM....rSrS..rSrS|none|none"
+          },
+          {
+            "turn": 2,
+            "player": "blue",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 3,
+                "y": 0
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|2|crab,goose|crane,elephant|horse|..bSbMbSbS..bS....................rM....rSrS..rSrS|none|none",
+            "stateHashAfter": "red|3|crab,goose|horse,elephant|crane|..bSbM..bS..bS..bS................rM....rSrS..rSrS|none|none"
+          },
+          {
+            "turn": 3,
+            "player": "red",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 1,
+                "y": 4
+              },
+              "to": {
+                "x": 1,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|3|crab,goose|horse,elephant|crane|..bSbM..bS..bS..bS................rM....rSrS..rSrS|none|none",
+            "stateHashAfter": "blue|4|crane,goose|horse,elephant|crab|..bSbM..bS..bS..bS..............rSrM....rS....rSrS|none|none"
+          },
+          {
+            "turn": 4,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|4|crane,goose|horse,elephant|crab|..bSbM..bS..bS..bS..............rSrM....rS....rSrS|none|none",
+            "stateHashAfter": "red|5|crane,goose|crab,elephant|horse|..bSbM..bS..bS............bS....rSrM....rS....rSrS|none|none"
+          },
+          {
+            "turn": 5,
+            "player": "red",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 1,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|5|crane,goose|crab,elephant|horse|..bSbM..bS..bS............bS....rSrM....rS....rSrS|none|none",
+            "stateHashAfter": "blue|6|horse,goose|crab,elephant|crane|..bSbM..bS..bS............bS....rS......rSrM..rSrS|none|none"
+          },
+          {
+            "turn": 6,
+            "player": "blue",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 2,
+                "y": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "blue|6|horse,goose|crab,elephant|crane|..bSbM..bS..bS............bS....rS......rSrM..rSrS|none|none",
+            "stateHashAfter": "red|7|horse,goose|crane,elephant|crab|bMbS....bS..bS............bS....rS......rSrM..rSrS|none|none"
+          },
+          {
+            "turn": 7,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 4,
+                "y": 4
+              },
+              "to": {
+                "x": 4,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|7|horse,goose|crane,elephant|crab|bMbS....bS..bS............bS....rS......rSrM..rSrS|none|none",
+            "stateHashAfter": "blue|8|crab,goose|crane,elephant|horse|bMbS....bS..bS............bS....rS....rSrSrM..rS..|none|none"
+          },
+          {
+            "turn": 8,
+            "player": "blue",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 4,
+                "y": 0
+              },
+              "to": {
+                "x": 4,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|8|crab,goose|crane,elephant|horse|bMbS....bS..bS............bS....rS....rSrSrM..rS..|none|none",
+            "stateHashAfter": "red|9|crab,goose|horse,elephant|crane|bMbS........bS....bS......bS....rS....rSrSrM..rS..|none|none"
+          },
+          {
+            "turn": 9,
+            "player": "red",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 4,
+                "y": 3
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|9|crab,goose|horse,elephant|crane|bMbS........bS....bS......bS....rS....rSrSrM..rS..|none|none",
+            "stateHashAfter": "blue|10|crab,crane|horse,elephant|goose|bMbS........bS....bS......rS....rS......rSrM..rS..|none|none"
+          },
+          {
+            "turn": 10,
+            "player": "blue",
+            "move": {
+              "card": "elephant",
+              "from": {
+                "x": 4,
+                "y": 1
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|10|crab,crane|horse,elephant|goose|bMbS........bS....bS......rS....rS......rSrM..rS..|none|none",
+            "stateHashAfter": "red|11|crab,crane|horse,goose|elephant|bMbS........bS............bS....rS......rSrM..rS..|none|none"
+          },
+          {
+            "turn": 11,
+            "player": "red",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 0,
+                "y": 4
+              },
+              "to": {
+                "x": 0,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|11|crab,crane|horse,goose|elephant|bMbS........bS............bS....rS......rSrM..rS..|none|none",
+            "stateHashAfter": "blue|12|crab,elephant|horse,goose|crane|bMbS........bS............bS..rSrS........rM..rS..|none|none"
+          },
+          {
+            "turn": 12,
+            "player": "blue",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 1,
+                "y": 0
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|12|crab,elephant|horse,goose|crane|bMbS........bS............bS..rSrS........rM..rS..|none|none",
+            "stateHashAfter": "red|13|crab,elephant|horse,crane|goose|bM..........bSbS..........bS..rSrS........rM..rS..|none|none"
+          },
+          {
+            "turn": 13,
+            "player": "red",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 0,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|13|crab,elephant|horse,crane|goose|bM..........bSbS..........bS..rSrS........rM..rS..|none|none",
+            "stateHashAfter": "blue|14|goose,elephant|horse,crane|crab|bM..........bSbS..........bS....rSrS......rM..rS..|none|none"
+          },
+          {
+            "turn": 14,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|14|goose,elephant|horse,crane|crab|bM..........bSbS..........bS....rSrS......rM..rS..|none|none",
+            "stateHashAfter": "red|15|goose,elephant|crab,crane|horse|bM..........bSbSbS..............rSrS......rM..rS..|none|none"
+          },
+          {
+            "turn": 15,
+            "player": "red",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|15|goose,elephant|crab,crane|horse|bM..........bSbSbS..............rSrS......rM..rS..|none|none",
+            "stateHashAfter": "blue|16|horse,elephant|crab,crane|goose|bM..........bSbSbS..............rS..rS....rM..rS..|none|none"
+          },
+          {
+            "turn": 16,
+            "player": "blue",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 2,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|16|horse,elephant|crab,crane|goose|bM..........bSbSbS..............rS..rS....rM..rS..|none|none",
+            "stateHashAfter": "red|17|horse,elephant|goose,crane|crab|bM..........bS..bS......bS......rS..rS....rM..rS..|none|none"
+          },
+          {
+            "turn": 17,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|17|horse,elephant|goose,crane|crab|bM..........bS..bS......bS......rS..rS....rM..rS..|none|none",
+            "stateHashAfter": "blue|18|crab,elephant|goose,crane|horse|bM..........bS..bS......bS......rS..rS....rMrS....|none|none"
+          },
+          {
+            "turn": 18,
+            "player": "blue",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "blue|18|crab,elephant|goose,crane|horse|bM..........bS..bS......bS......rS..rS....rMrS....|none|none",
+            "stateHashAfter": "red|19|crab,elephant|horse,crane|goose|bM..........bS..bS..............rS..bS....rMrS....|none|none"
+          },
+          {
+            "turn": 19,
+            "player": "red",
+            "move": {
+              "card": "elephant",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|19|crab,elephant|horse,crane|goose|bM..........bS..bS..............rS..bS....rMrS....|none|none",
+            "stateHashAfter": "blue|20|crab,goose|horse,crane|elephant|bM..........bS..bS..............rS..rS....rM......|none|none"
+          },
+          {
+            "turn": 20,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 1,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|20|crab,goose|horse,crane|elephant|bM..........bS..bS..............rS..rS....rM......|none|none",
+            "stateHashAfter": "red|21|crab,goose|elephant,crane|horse|bM............bSbS..............rS..rS....rM......|none|none"
+          },
+          {
+            "turn": 21,
+            "player": "red",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 1,
+                "y": 4
+              },
+              "to": {
+                "x": 3,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|21|crab,goose|elephant,crane|horse|bM............bSbS..............rS..rS....rM......|none|none",
+            "stateHashAfter": "blue|22|horse,goose|elephant,crane|crab|bM............bSbS..............rS..rS........rM..|none|none"
+          },
+          {
+            "turn": 22,
+            "player": "blue",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 2,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|22|horse,goose|elephant,crane|crab|bM............bSbS..............rS..rS........rM..|none|none",
+            "stateHashAfter": "red|23|horse,goose|elephant,crab|crane|bM..............bS......bS......rS..rS........rM..|none|none"
+          },
+          {
+            "turn": 23,
+            "player": "red",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 3,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|23|horse,goose|elephant,crab|crane|bM..............bS......bS......rS..rS........rM..|none|none",
+            "stateHashAfter": "blue|24|horse,crane|elephant,crab|goose|bM..............bS......rS......rS............rM..|none|none"
+          },
+          {
+            "turn": 24,
+            "player": "blue",
+            "move": {
+              "card": "elephant",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|24|horse,crane|elephant,crab|goose|bM..............bS......rS......rS............rM..|none|none",
+            "stateHashAfter": "red|25|horse,crane|goose,crab|elephant|bM......................bS......rS............rM..|none|none"
+          },
+          {
+            "turn": 25,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 4
+              }
+            },
+            "stateHashBefore": "red|25|horse,crane|goose,crab|elephant|bM......................bS......rS............rM..|none|none",
+            "stateHashAfter": "blue|26|elephant,crane|goose,crab|horse|bM......................bS......rS..........rM....|none|none"
+          },
+          {
+            "turn": 26,
+            "player": "blue",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "blue|26|elephant,crane|goose,crab|horse|bM......................bS......rS..........rM....|none|none",
+            "stateHashAfter": "red|27|elephant,crane|horse,crab|goose|bM........................bS....rS..........rM....|none|none"
+          },
+          {
+            "turn": 27,
+            "player": "red",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 2,
+                "y": 4
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|27|elephant,crane|horse,crab|goose|bM........................bS....rS..........rM....|none|none",
+            "stateHashAfter": "blue|28|elephant,goose|horse,crab|crane|bM........................bS....rSrM..............|none|none"
+          },
+          {
+            "turn": 28,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|28|elephant,goose|horse,crab|crane|bM........................bS....rSrM..............|none|none",
+            "stateHashAfter": "red|29|elephant,goose|crane,crab|horse|bM..............bS..............rSrM..............|none|none"
+          },
+          {
+            "turn": 29,
+            "player": "red",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|29|elephant,goose|crane,crab|horse|bM..............bS..............rSrM..............|none|none",
+            "stateHashAfter": "blue|30|elephant,horse|crane,crab|goose|bM..............bS..............rS..rM............|none|none"
+          },
+          {
+            "turn": 30,
+            "player": "blue",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 0,
+                "y": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "blue|30|elephant,horse|crane,crab|goose|bM..............bS..............rS..rM............|none|none",
+            "stateHashAfter": "red|31|elephant,horse|crane,goose|crab|..........bM....bS..............rS..rM............|none|none"
+          },
+          {
+            "turn": 31,
+            "player": "red",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 3,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 3
+              }
+            },
+            "stateHashBefore": "red|31|elephant,horse|crane,goose|crab|..........bM....bS..............rS..rM............|none|none",
+            "stateHashAfter": "blue|32|elephant,crab|crane,goose|horse|..........bM....bS..............rSrM..............|none|none"
+          },
+          {
+            "turn": 32,
+            "player": "blue",
+            "move": {
+              "card": "crane",
+              "from": {
+                "x": 0,
+                "y": 1
+              },
+              "to": {
+                "x": 1,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "blue|32|elephant,crab|crane,goose|horse|..........bM....bS..............rSrM..............|none|none",
+            "stateHashAfter": "red|33|elephant,crab|horse,goose|crane|..bM............bS..............rSrM..............|none|none"
+          },
+          {
+            "turn": 33,
+            "player": "red",
+            "move": {
+              "card": "crab",
+              "from": {
+                "x": 2,
+                "y": 3
+              },
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            "stateHashBefore": "red|33|elephant,crab|horse,goose|crane|..bM............bS..............rSrM..............|none|none",
+            "stateHashAfter": "blue|34|elephant,crane|horse,goose|crab|..bM............bS......rM......rS................|none|none"
+          },
+          {
+            "turn": 34,
+            "player": "blue",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 1,
+                "y": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "blue|34|elephant,crane|horse,goose|crab|..bM............bS......rM......rS................|none|none",
+            "stateHashAfter": "red|35|elephant,crane|horse,crab|goose|bM..............bS......rM......rS................|none|none"
+          },
+          {
+            "turn": 35,
+            "player": "red",
+            "move": {
+              "card": "elephant",
+              "from": {
+                "x": 2,
+                "y": 2
+              },
+              "to": {
+                "x": 3,
+                "y": 1
+              }
+            },
+            "stateHashBefore": "red|35|elephant,crane|horse,crab|goose|bM..............bS......rM......rS................|none|none",
+            "stateHashAfter": "blue|36|goose,crane|horse,crab|elephant|bM..............rM..............rS................|none|none"
+          },
+          {
+            "turn": 36,
+            "player": "blue",
+            "move": {
+              "card": "horse",
+              "from": {
+                "x": 0,
+                "y": 0
+              },
+              "to": {
+                "x": 1,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "blue|36|goose,crane|horse,crab|elephant|bM..............rM..............rS................|none|none",
+            "stateHashAfter": "red|37|goose,crane|elephant,crab|horse|..bM............rM..............rS................|none|none"
+          },
+          {
+            "turn": 37,
+            "player": "red",
+            "move": {
+              "card": "goose",
+              "from": {
+                "x": 3,
+                "y": 1
+              },
+              "to": {
+                "x": 2,
+                "y": 0
+              }
+            },
+            "stateHashBefore": "red|37|goose,crane|elephant,crab|horse|..bM............rM..............rS................|none|none",
+            "stateHashAfter": "blue|38|horse,crane|elephant,crab|goose|..bMrM..........................rS................|red|temple-arch"
+          }
+        ]
+      }
+    }
+  ]
+}

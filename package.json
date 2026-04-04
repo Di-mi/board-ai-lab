@@ -1,0 +1,28 @@
+{
+  "name": "board-ai-lab",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "dev": "pnpm --filter @board-ai-lab/playground dev",
+    "dev:public": "pnpm --filter @board-ai-lab/public-site dev",
+    "train": "pnpm --filter @board-ai-lab/benchmark-cli train",
+    "hive-train": "pnpm --filter @board-ai-lab/benchmark-cli hive-train",
+    "hive-train-daemon": "pnpm --filter @board-ai-lab/benchmark-cli hive-train-daemon",
+    "hive-llm-match": "pnpm --filter @board-ai-lab/benchmark-cli hive-llm-match",
+    "benchmark": "pnpm --filter @board-ai-lab/benchmark-cli benchmark",
+    "llm-match": "pnpm --filter @board-ai-lab/benchmark-cli llm-match",
+    "report": "pnpm --filter @board-ai-lab/benchmark-cli report",
+    "record-human-result": "pnpm --filter @board-ai-lab/benchmark-cli record-human-result",
+    "export-public-site": "pnpm --filter @board-ai-lab/benchmark-cli export-public-site"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "dotenv": "^17.3.1",
+    "playwright": "^1.58.2",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@board-ai-lab/benchmark-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "train": "tsx src/index.ts train",
+    "hive-train": "tsx src/hive-train.ts",
+    "hive-train-daemon": "tsx src/hive-train-daemon.ts",
+    "hive-profile": "tsx src/hive-profile.ts",
+    "hive-headtohead": "tsx src/hive-headtohead.ts",
+    "hive-llm-match": "tsx src/hive-llm-match.ts",
+    "benchmark": "tsx src/index.ts benchmark",
+    "llm-match": "tsx src/index.ts llm-match",
+    "report": "tsx src/index.ts report",
+    "record-human-result": "tsx src/index.ts record-human-result",
+    "export-public-site": "tsx src/index.ts export-public-site"
+  },
+  "dependencies": {
+    "@board-ai-lab/agents-ga": "workspace:*",
+    "@board-ai-lab/agents-llm": "workspace:*",
+    "@board-ai-lab/agents-random": "workspace:*",
+    "@board-ai-lab/hive-ga": "workspace:*",
+    "@board-ai-lab/onitama-engine": "workspace:*",
+    "@board-ai-lab/replay-artifacts": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3"
+  }
+}

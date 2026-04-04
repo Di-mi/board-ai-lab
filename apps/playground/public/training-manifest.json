@@ -1,0 +1,167 @@
+[
+  {
+    "runId": "train-1772878297644",
+    "createdAtIso": "2026-03-07T10:11:37.644Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772878297644/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.11667865574569523,
+      "masterSafety": 0.11157486960236197,
+      "mobility": 0.2028245265116448,
+      "templePressure": 1.2178600478414974,
+      "captureThreat": 1.7777948510577686,
+      "centerControl": 1.833938395034756,
+      "cardTempo": 0.09139750245482374
+    }
+  },
+  {
+    "runId": "train-1772875857331",
+    "createdAtIso": "2026-03-07T09:30:57.331Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772875857331/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": -0.10966489417478442,
+      "masterSafety": 0.6715321149677038,
+      "mobility": 2.397347839549184,
+      "templePressure": -2.5345055661164224,
+      "captureThreat": 1.3175880904309452,
+      "centerControl": 2.6092063919641078,
+      "cardTempo": -1.330491169821471
+    }
+  },
+  {
+    "runId": "train-1772872563126",
+    "createdAtIso": "2026-03-07T08:36:03.126Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772872563126/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.04940361091900701,
+      "masterSafety": -0.15980166496929765,
+      "mobility": 2.6765828735420856,
+      "templePressure": 1.1152301808204415,
+      "captureThreat": 0.7404767051985315,
+      "centerControl": 5,
+      "cardTempo": -2.5614801439823776
+    }
+  },
+  {
+    "runId": "train-1772872205190",
+    "createdAtIso": "2026-03-07T08:30:05.190Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772872205190/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": -0.07780225878907022,
+      "masterSafety": 0.18341063535816768,
+      "mobility": 0.40925925406396907,
+      "templePressure": 2.61217439090116,
+      "captureThreat": 4.341826237387809,
+      "centerControl": 1.1636636365201602,
+      "cardTempo": 0.7065075085168113
+    }
+  },
+  {
+    "runId": "train-1772871995165",
+    "createdAtIso": "2026-03-07T08:26:35.165Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772871995165/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": -0.3532027907753208,
+      "masterSafety": -0.4369052025457572,
+      "mobility": 1.4218356967248535,
+      "templePressure": 0.9514773205223832,
+      "captureThreat": 1.895385211561706,
+      "centerControl": -0.5820362243377092,
+      "cardTempo": -0.7715333071144604
+    }
+  },
+  {
+    "runId": "train-1772869119564",
+    "createdAtIso": "2026-03-07T07:38:39.564Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772869119564/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 1,
+      "masterSafety": 1.2,
+      "mobility": 0.8,
+      "templePressure": 0.6,
+      "captureThreat": 1,
+      "centerControl": 0.5,
+      "cardTempo": 0.4
+    }
+  },
+  {
+    "runId": "train-1772868741880",
+    "createdAtIso": "2026-03-07T07:32:21.880Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772868741880/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 1,
+      "masterSafety": 1.2,
+      "mobility": 0.8,
+      "templePressure": 0.6,
+      "captureThreat": 1,
+      "centerControl": 0.5,
+      "cardTempo": 0.4
+    }
+  },
+  {
+    "runId": "train-1772867527848",
+    "createdAtIso": "2026-03-07T07:12:07.848Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772867527848/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.7484679236076772,
+      "masterSafety": 2.1928478898480535,
+      "mobility": -0.16609766939654946,
+      "templePressure": -1.5004575946368277,
+      "captureThreat": 2.292353000957519,
+      "centerControl": 1.4744253898970783,
+      "cardTempo": -1.1579909194260836
+    }
+  },
+  {
+    "runId": "train-1772783009731",
+    "createdAtIso": "2026-03-06T07:43:29.731Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772783009731/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.7484679236076772,
+      "masterSafety": 2.1928478898480535,
+      "mobility": -0.16609766939654946,
+      "templePressure": -1.5004575946368277,
+      "captureThreat": 2.292353000957519,
+      "centerControl": 1.4744253898970783,
+      "cardTempo": -1.1579909194260836
+    }
+  },
+  {
+    "runId": "train-1772782672514",
+    "createdAtIso": "2026-03-06T07:37:52.514Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772782672514/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.7484679236076772,
+      "masterSafety": 2.1928478898480535,
+      "mobility": -0.16609766939654946,
+      "templePressure": -1.5004575946368277,
+      "captureThreat": 2.292353000957519,
+      "centerControl": 1.4744253898970783,
+      "cardTempo": -1.1579909194260836
+    }
+  },
+  {
+    "runId": "train-1772698079494",
+    "createdAtIso": "2026-03-05T08:07:59.494Z",
+    "bestGenomePath": "../../../artifacts/training/train-1772698079494/best-genome.json",
+    "fitness": 1,
+    "weights": {
+      "material": 0.7484679236076772,
+      "masterSafety": 2.1928478898480535,
+      "mobility": -0.16609766939654946,
+      "templePressure": -1.5004575946368277,
+      "captureThreat": 2.292353000957519,
+      "centerControl": 1.4744253898970783,
+      "cardTempo": -1.1579909194260836
+    }
+  }
+]

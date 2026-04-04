@@ -1,0 +1,86 @@
+{
+  "updatedAtIso": "2026-03-07T10:38:55.549Z",
+  "totals": {
+    "wins": 4,
+    "losses": 3,
+    "draws": 0,
+    "games": 7
+  },
+  "entries": [
+    {
+      "id": "human-1772783328332",
+      "recordedAtIso": "2026-03-06T07:48:48.332Z",
+      "humanPlayer": "dimi",
+      "result": "win",
+      "moveCount": 10,
+      "trainedRunId": "train-1772783009731",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772783009731/best-genome.json",
+      "notes": "First recorded human win against trained genome from playground session."
+    },
+    {
+      "id": "human-1772783586885",
+      "recordedAtIso": "2026-03-06T07:53:06.885Z",
+      "humanPlayer": "dimi",
+      "result": "win",
+      "moveCount": 20,
+      "trainedRunId": "train-1772783009731",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772783009731/best-genome.json",
+      "notes": "Second recorded human win against trained genome from playground session."
+    },
+    {
+      "id": "human-1772867326523",
+      "recordedAtIso": "2026-03-07T07:08:46.523Z",
+      "humanPlayer": "dimi",
+      "result": "win",
+      "moveCount": 14,
+      "humanSide": "red",
+      "trainedRunId": "train-1772783009731",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772783009731/best-genome.json",
+      "notes": "Recorded automatically from playground."
+    },
+    {
+      "id": "human-1772875342843",
+      "recordedAtIso": "2026-03-07T09:22:22.843Z",
+      "humanPlayer": "dimi",
+      "result": "win",
+      "moveCount": 26,
+      "humanSide": "red",
+      "trainedRunId": "train-1772872563126",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772872563126/best-genome.json",
+      "notes": "Recorded automatically from playground."
+    },
+    {
+      "id": "human-1772875509182",
+      "recordedAtIso": "2026-03-07T09:25:09.182Z",
+      "humanPlayer": "dimi",
+      "result": "loss",
+      "moveCount": 17,
+      "humanSide": "red",
+      "trainedRunId": "train-1772872563126",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772872563126/best-genome.json",
+      "notes": "Recorded automatically from playground."
+    },
+    {
+      "id": "human-1772879323497",
+      "recordedAtIso": "2026-03-07T10:28:43.497Z",
+      "humanPlayer": "dimi",
+      "result": "loss",
+      "moveCount": 22,
+      "humanSide": "red",
+      "trainedRunId": "train-1772878297644",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772878297644/best-genome.json",
+      "notes": "Recorded automatically from playground."
+    },
+    {
+      "id": "human-1772879935549",
+      "recordedAtIso": "2026-03-07T10:38:55.549Z",
+      "humanPlayer": "dimi",
+      "result": "loss",
+      "moveCount": 31,
+      "humanSide": "red",
+      "trainedRunId": "train-1772878297644",
+      "trainedGenomePath": "/Users/dimi/Documents/board-ai-lab/artifacts/training/train-1772878297644/best-genome.json",
+      "notes": "Recorded automatically from playground."
+    }
+  ]
+}
