@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import type { Filters } from "../lib/benchmarks.js";
 
 export type PublicSitePage = "leaderboard" | "latency" | "methodology" | "rulebook" | "play";
@@ -166,6 +166,66 @@ export function DiceFace({ pips, color }: { pips: 1 | 3 | 6; color: string }) {
   );
 }
 
+export function FilterDropdown({
+  label,
+  value,
+  options,
+  onChange
+}: {
+  label: string;
+  value: string;
+  options: Array<{ value: string; label: string }>;
+  onChange: (value: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const selected = options.find((o) => o.value === value);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
+
+  return (
+    <div className="filter-dropdown" ref={ref}>
+      <span className="filter-dropdown-label">{label}</span>
+      <button
+        type="button"
+        className={`filter-dropdown-trigger${open ? " open" : ""}`}
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+      >
+        <span>{selected?.label ?? value}</span>
+        <svg viewBox="0 0 12 8" className="filter-dropdown-chevron" aria-hidden="true">
+          <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <ul className="filter-dropdown-menu" role="listbox">
+          {options.map((opt) => (
+            <li
+              key={opt.value}
+              role="option"
+              aria-selected={opt.value === value}
+              className={`filter-dropdown-option${opt.value === value ? " selected" : ""}`}
+              onMouseDown={() => { onChange(opt.value); setOpen(false); }}
+            >
+              {opt.label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export function SiteHeader({
   page,
   filters,
@@ -191,14 +251,14 @@ export function SiteHeader({
 
   return (
     <header className="site-header">
-      <div className="brand-cluster">
+      <a className="brand-cluster" {...navProps("leaderboard")} aria-label="Go to leaderboard">
         <div className="brand-wordmark">
           <span className="brand-word brand-word-meeples">Meeples</span>
           <span className="brand-slash">&amp;</span>
           <span className="brand-word brand-word-models">Models</span>
         </div>
         <p className="brand-tagline">LLM benchmarks on strategic board games</p>
-      </div>
+      </a>
       <nav className="site-nav">
         <a {...navProps("leaderboard")} className={page === "leaderboard" ? "active" : ""}>
           Leaderboard

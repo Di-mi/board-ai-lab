@@ -1,6 +1,6 @@
 import { useMemo, type Dispatch, type SetStateAction } from "react";
 import { buildLeaderboardRows, type Filters, type LeaderboardRow, type PublicBenchmarks } from "../lib/benchmarks.js";
-import { CornerMeeple, RankMeeple, fixed, formatDate, formatMs, percent, providerClass } from "../shared/site.js";
+import { CornerMeeple, FilterDropdown, RankMeeple, fixed, formatDate, formatMs, percent, providerClass } from "../shared/site.js";
 
 function ProviderLegend({ providers }: { providers: string[] }) {
   const labels: Record<string, string> = { anthropic: "Anthropic", google: "Google", openai: "OpenAI", minimax: "Minimax" };
@@ -319,37 +319,24 @@ export function LeaderboardPage({
   return (
     <div className="page-full">
       <div className="toolbar-card">
-        <label>
-          Game
-          <select value={filters.gameId} onChange={(e) => setFilters((current) => ({ ...current, gameId: e.target.value }))}>
-            <option value="all">All games</option>
-            {data.games.map((game) => (
-              <option key={game.id} value={game.id}>{game.label}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Difficulty
-          <select value={filters.difficultyId} onChange={(e) => setFilters((current) => ({ ...current, difficultyId: e.target.value }))}>
-            <option value="all">All difficulties</option>
-            {data.difficulties.map((difficulty) => (
-              <option key={difficulty.id} value={difficulty.id}>{difficulty.label} — {difficulty.description}</option>
-            ))}
-          </select>
-          {filters.difficultyId !== "all" && (() => {
-            const difficulty = data.difficulties.find((entry) => entry.id === filters.difficultyId);
-            return difficulty ? <span className="filter-hint">{difficulty.description}</span> : null;
-          })()}
-        </label>
-        <label>
-          Model
-          <select value={filters.modelId} onChange={(e) => setFilters((current) => ({ ...current, modelId: e.target.value }))}>
-            <option value="all">All models</option>
-            {data.models.map((model) => (
-              <option key={model.id} value={model.id}>{model.label}</option>
-            ))}
-          </select>
-        </label>
+        <FilterDropdown
+          label="Game"
+          value={filters.gameId}
+          options={[{ value: "all", label: "All games" }, ...data.games.map((g) => ({ value: g.id, label: g.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, gameId: v }))}
+        />
+        <FilterDropdown
+          label="Difficulty"
+          value={filters.difficultyId}
+          options={[{ value: "all", label: "All difficulties" }, ...data.difficulties.map((d) => ({ value: d.id, label: d.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, difficultyId: v }))}
+        />
+        <FilterDropdown
+          label="Model"
+          value={filters.modelId}
+          options={[{ value: "all", label: "All models" }, ...data.models.map((m) => ({ value: m.id, label: m.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, modelId: v }))}
+        />
       </div>
 
       {rows.length > 0 ? <ChampionPodium rows={rows} data={data} /> : null}
@@ -406,34 +393,25 @@ export function LatencyPage({
 
   return (
     <div className="latency-page">
-      <div className="toolbar-card" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))" }}>
-        <label>
-          Game
-          <select value={filters.gameId} onChange={(e) => setFilters((current) => ({ ...current, gameId: e.target.value }))}>
-            <option value="all">All games</option>
-            {data.games.map((game) => (
-              <option key={game.id} value={game.id}>{game.label}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Difficulty
-          <select value={filters.difficultyId} onChange={(e) => setFilters((current) => ({ ...current, difficultyId: e.target.value }))}>
-            <option value="all">All difficulties</option>
-            {data.difficulties.map((difficulty) => (
-              <option key={difficulty.id} value={difficulty.id}>{difficulty.label} — {difficulty.description}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Model
-          <select value={filters.modelId} onChange={(e) => setFilters((current) => ({ ...current, modelId: e.target.value }))}>
-            <option value="all">All models</option>
-            {data.models.map((model) => (
-              <option key={model.id} value={model.id}>{model.label}</option>
-            ))}
-          </select>
-        </label>
+      <div className="toolbar-card">
+        <FilterDropdown
+          label="Game"
+          value={filters.gameId}
+          options={[{ value: "all", label: "All games" }, ...data.games.map((g) => ({ value: g.id, label: g.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, gameId: v }))}
+        />
+        <FilterDropdown
+          label="Difficulty"
+          value={filters.difficultyId}
+          options={[{ value: "all", label: "All difficulties" }, ...data.difficulties.map((d) => ({ value: d.id, label: d.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, difficultyId: v }))}
+        />
+        <FilterDropdown
+          label="Model"
+          value={filters.modelId}
+          options={[{ value: "all", label: "All models" }, ...data.models.map((m) => ({ value: m.id, label: m.label }))]}
+          onChange={(v) => setFilters((f) => ({ ...f, modelId: v }))}
+        />
       </div>
 
       <div className="page-card">
