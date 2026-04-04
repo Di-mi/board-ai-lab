@@ -7,6 +7,7 @@ import {
   HexBadge,
   MeepleBullet,
   SiteHeader,
+  pageHref,
   pageTitle,
   readFilters,
   readPageFromLocation,
@@ -252,21 +253,21 @@ function PageContent({
   setFilters
 }: {
   page: PublicSitePage;
-  data: PublicBenchmarks;
+  data: PublicBenchmarks | null;
   filters: Filters;
   setFilters: Dispatch<SetStateAction<Filters>>;
 }) {
   switch (page) {
     case "leaderboard":
-      return <LeaderboardPage data={data} filters={filters} setFilters={setFilters} />;
+      return data ? <LeaderboardPage data={data} filters={filters} setFilters={setFilters} /> : null;
     case "latency":
-      return <LatencyPage data={data} filters={filters} setFilters={setFilters} />;
+      return data ? <LatencyPage data={data} filters={filters} setFilters={setFilters} /> : null;
     case "methodology":
       return <MethodologyPage />;
     case "rulebook":
       return <RulebookPage />;
     case "play":
-      return <PlayPage data={data} />;
+      return data ? <PlayPage data={data} /> : null;
   }
 }
 
@@ -309,9 +310,14 @@ export function SiteView({ page, data }: { page: PublicSitePage; data: PublicBen
     document.title = pageTitle(currentPage);
   }, [currentPage]);
 
+  function navigate(targetPage: PublicSitePage) {
+    history.pushState({}, "", pageHref(targetPage, filters));
+    setCurrentPage(targetPage);
+  }
+
   return (
     <div className="site-shell">
-      <SiteHeader page={currentPage} filters={filters} />
+      <SiteHeader page={currentPage} filters={filters} onNavigate={navigate} />
       <PageContent page={currentPage} data={data} filters={filters} setFilters={setFilters} />
     </div>
   );
@@ -370,26 +376,29 @@ export function SiteLoader({ page }: { page?: PublicSitePage }) {
     document.title = pageTitle(currentPage);
   }, [currentPage]);
 
+  function navigate(targetPage: PublicSitePage) {
+    history.pushState({}, "", pageHref(targetPage, filters));
+    setCurrentPage(targetPage);
+  }
+
+  const needsData = currentPage === "leaderboard" || currentPage === "latency" || currentPage === "play";
+
   if (error) {
     return (
       <div className="site-shell">
+        <SiteHeader page={currentPage} filters={filters} onNavigate={navigate} />
         <p style={{ color: "var(--orange)", padding: 24 }}>Failed to load benchmark data: {error}</p>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className="site-shell">
-        <p style={{ color: "var(--text-dim)", padding: 24 }}>Loading…</p>
       </div>
     );
   }
 
   return (
     <div className="site-shell">
-      <SiteHeader page={currentPage} filters={filters} />
-      <PageContent page={currentPage} data={data} filters={filters} setFilters={setFilters} />
+      <SiteHeader page={currentPage} filters={filters} onNavigate={navigate} />
+      {!data && needsData
+        ? <p style={{ color: "var(--text-dim)", padding: 24 }}>Loading…</p>
+        : <PageContent page={currentPage} data={data} filters={filters} setFilters={setFilters} />
+      }
     </div>
   );
 }

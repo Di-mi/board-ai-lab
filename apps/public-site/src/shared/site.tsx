@@ -168,15 +168,25 @@ export function DiceFace({ pips, color }: { pips: 1 | 3 | 6; color: string }) {
 
 export function SiteHeader({
   page,
-  filters
+  filters,
+  onNavigate
 }: {
   page: PublicSitePage;
   filters: Filters;
+  onNavigate?: (page: PublicSitePage) => void;
 }) {
   function navProps(targetPage: PublicSitePage) {
-    return {
-      href: pageHref(targetPage, filters)
-    };
+    const href = pageHref(targetPage, filters);
+    if (onNavigate) {
+      return {
+        href,
+        onClick(e: { preventDefault(): void }) {
+          e.preventDefault();
+          onNavigate(targetPage);
+        }
+      };
+    }
+    return { href };
   }
 
   return (
