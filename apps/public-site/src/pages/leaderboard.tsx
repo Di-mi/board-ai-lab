@@ -16,11 +16,43 @@ function ProviderLegend({ providers }: { providers: string[] }) {
   );
 }
 
+function ProviderLogo({ provider }: { provider: string | undefined }) {
+  if (!provider) return null;
+  switch (provider) {
+    case "anthropic":
+      return (
+        <svg viewBox="0 0 24 24" className="champion-provider-logo" aria-label="Anthropic">
+          <path d="M13.83 3h-3.66L4 21h3.67l1.3-3.83h6.06L16.33 21H20L13.83 3zm-3.97 11.17 2.14-6.3 2.14 6.3H9.86z" />
+        </svg>
+      );
+    case "openai":
+      return (
+        <svg viewBox="0 0 24 24" className="champion-provider-logo" aria-label="OpenAI">
+          <path d="M22.28 9.18a6.13 6.13 0 00-.52-5.03 6.2 6.2 0 00-6.65-2.97A6.13 6.13 0 0010.56 0a6.2 6.2 0 00-5.9 4.3 6.13 6.13 0 00-4.1 2.97 6.2 6.2 0 00.76 7.27 6.13 6.13 0 00.52 5.03 6.2 6.2 0 006.65 2.97c.98.84 2.22 1.3 3.51 1.46a6.2 6.2 0 005.88-4.3 6.13 6.13 0 004.1-2.97 6.2 6.2 0 00-.7-7.55zM13.44 22c-.97 0-1.89-.33-2.62-.9l.13-.07 4.35-2.51a.72.72 0 00.36-.63v-6.13l1.83 1.06a.07.07 0 01.04.05v5.07A4.37 4.37 0 0113.44 22zm-9.37-4a4.36 4.36 0 01-.52-2.93l.14.08 4.35 2.51c.22.13.49.13.71 0l5.3-3.06v2.12a.07.07 0 01-.03.06l-4.4 2.54a4.37 4.37 0 01-5.55-1.32zm-1.2-10.16a4.35 4.35 0 012.27-1.92v5.18a.72.72 0 00.36.63l5.3 3.06-1.83 1.06a.07.07 0 01-.07 0L4.57 13.2a4.37 4.37 0 01-1.7-5.36zm15.06 3.74-5.3-3.06 1.83-1.06a.07.07 0 01.07 0l4.32 2.5c1.25.72 2.01 2.05 2.01 3.49-.01 1.44-.77 2.77-2.01 3.49v-5.18a.72.72 0 00-.92-.18zm1.82-3.07-.14-.08-4.34-2.52a.71.71 0 00-.71 0L9.28 10.32V8.2a.07.07 0 01.03-.06l4.4-2.53a4.36 4.36 0 016.06 4.9zM8.4 13.14 6.57 12.08a.07.07 0 01-.04-.05V6.96a4.36 4.36 0 017.16-3.34l-.14.08-4.35 2.51a.72.72 0 00-.36.63l-.44 6.3zm.98-.22 1.44-.83 1.44.83v1.66l-1.44.83-1.44-.83v-1.66z" />
+        </svg>
+      );
+    case "google":
+      return (
+        <svg viewBox="0 0 24 24" className="champion-provider-logo" aria-label="Google">
+          <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+        </svg>
+      );
+    case "minimax":
+      return (
+        <svg viewBox="0 0 24 24" className="champion-provider-logo" aria-label="Minimax" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 18V8l4.5 7L12 8l4.5 7L21 8v10" strokeWidth="2" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 function ChampionPodium({ rows, data }: { rows: LeaderboardRow[]; data: PublicBenchmarks }) {
   const top3 = rows.slice(0, 3);
   if (top3.length === 0) return null;
 
-  const rankLabels = ["🥇 #1 Best Model", "🥈 #2 Runner Up", "🥉 #3 Third Place"];
+  const rankLabels = ["Best Model", "Runner Up", "Third Place"];
   const rankClasses = ["rank-1", "rank-2", "rank-3"];
 
   return (
@@ -29,12 +61,15 @@ function ChampionPodium({ rows, data }: { rows: LeaderboardRow[]; data: PublicBe
         const model = data.models.find((entry) => entry.id === row.modelId);
         return (
           <div key={row.groupId} className={`champion-card ${rankClasses[index] ?? "rank-4"}`}>
-            <div className="champion-rank">{rankLabels[index] ?? `#${index + 1}`}</div>
+            <div className="champion-rank">
+              <span className="champion-rank-num">#{index + 1}</span>
+              <span className="champion-rank-label">{rankLabels[index] ?? ""}</span>
+            </div>
+            <ProviderLogo provider={model?.provider} />
             <div className="champion-name">{row.modelLabel}</div>
             <div className="champion-score">{row.displayedScore.toFixed(1)}</div>
             <div className="champion-meta">
               {row.gameLabel} &nbsp;·&nbsp; {row.difficultyLabel} &nbsp;·&nbsp; {row.wins}W – {row.draws}D – {row.losses}L
-              {model?.provider ? <> &nbsp;·&nbsp; {model.provider.charAt(0).toUpperCase() + model.provider.slice(1)}</> : null}
             </div>
           </div>
         );
@@ -154,19 +189,19 @@ function ScoreCharts({ rows, data }: { rows: LeaderboardRow[]; data: PublicBench
     <>
       <ProviderLegend providers={providers} />
       <div className="chart-section">
-        <p className="chart-title">Overall Score — sorted best to worst</p>
+        <p className="chart-title">Overall Score</p>
         <BarChart rows={scoreBars} tall />
       </div>
       <div className="chart-section">
-        <p className="chart-title">Win / Draw / Loss outcomes (green = wins, yellow = draws, red = losses)</p>
+        <p className="chart-title">Win / Draw / Loss</p>
         <BarChart rows={winBars} />
       </div>
       <div className="chart-section">
-        <p className="chart-title">Tactical Quality — move correctness in Onitama, side-balanced outcomes in Hive</p>
+        <p className="chart-title">Tactical Quality</p>
         <BarChart rows={qualityBars} />
       </div>
       <div className="chart-section">
-        <p className="chart-title">Response Speed — sorted fastest to slowest, avg ms per move</p>
+        <p className="chart-title">Response Speed</p>
         <BarChart rows={speedBars} />
       </div>
     </>

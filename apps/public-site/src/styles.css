@@ -99,6 +99,15 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
   gap: 12px;
 }
 
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-full, .play-layout, .method-layout, .rulebook-layout, .latency-page {
+  animation: fade-in 160ms ease;
+}
+
 /* =====================================================
    HEADER
    ===================================================== */
@@ -182,6 +191,7 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
 .site-nav a.active {
   background: var(--cool-d);
   border-color: rgba(139,124,248,0.4);
+  border-bottom-color: var(--cool-hi);
   color: var(--cool-hi);
 }
 
@@ -299,8 +309,8 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
 .toolbar-card select {
   border: 1px solid var(--line-hi);
   border-radius: 6px;
-  padding: 8px 11px;
-  background: var(--bg-hi);
+  padding: 8px 30px 8px 11px;
+  background: var(--bg-hi) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(221,225,236,0.35)' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 10px center;
   color: var(--t1);
   appearance: none;
   -webkit-appearance: none;
@@ -323,34 +333,60 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
    ===================================================== */
 
 .champion-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
 }
 
 .champion-card {
-  padding: 18px 20px;
+  flex: 1;
+  position: relative;
+  padding: 16px 18px 18px;
   border-radius: 10px;
   border: 1px solid var(--line);
   background: var(--bg-hi);
   display: grid;
-  gap: 5px;
+  gap: 6px;
 }
 
-.champion-card.rank-1 { border-color: rgba(240,183,64,0.3); background: linear-gradient(155deg, rgba(240,183,64,0.06) 0%, var(--bg-hi) 55%); }
-.champion-card.rank-2 { border-color: rgba(178,168,251,0.22); background: linear-gradient(155deg, rgba(178,168,251,0.04) 0%, var(--bg-hi) 55%); }
-.champion-card.rank-3 { border-color: rgba(40,196,174,0.22); background: linear-gradient(155deg, rgba(40,196,174,0.04) 0%, var(--bg-hi) 55%); }
+.champion-card.rank-1 { order: 2; padding-bottom: 28px; border-color: rgba(240,183,64,0.3); background: linear-gradient(155deg, rgba(240,183,64,0.06) 0%, var(--bg-hi) 60%); }
+.champion-card.rank-2 { order: 1; border-color: rgba(178,168,251,0.22); background: linear-gradient(155deg, rgba(178,168,251,0.04) 0%, var(--bg-hi) 60%); }
+.champion-card.rank-3 { order: 3; border-color: rgba(40,196,174,0.22); background: linear-gradient(155deg, rgba(40,196,174,0.04) 0%, var(--bg-hi) 60%); }
 
 .champion-rank {
-  font-size: 0.6rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+
+.champion-rank-num {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
   color: var(--t4);
 }
-.champion-card.rank-1 .champion-rank { color: var(--gold); }
-.champion-card.rank-2 .champion-rank { color: var(--cool-hi); }
-.champion-card.rank-3 .champion-rank { color: var(--teal); }
+.champion-card.rank-1 .champion-rank-num { color: var(--gold); }
+.champion-card.rank-2 .champion-rank-num { color: var(--cool-hi); }
+.champion-card.rank-3 .champion-rank-num { color: var(--teal); }
+
+.champion-rank-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--t4);
+}
+
+.champion-provider-logo {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  fill: rgba(221,225,236,0.15);
+  stroke: rgba(221,225,236,0.15);
+}
 
 .champion-name {
   font-size: 0.88rem;
@@ -422,19 +458,13 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
   border-top: 1px solid var(--line);
 }
 
-/* Section label — pill style */
+/* Section label */
 .chart-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0 0 16px;
-  font-size: 0.62rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--t3);
-  padding: 3px 0;
-  border-bottom: 2px solid var(--line-hi);
+  margin: 0 0 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--t2);
 }
 
 .bar-chart { display: grid; gap: 9px; }
@@ -1747,7 +1777,10 @@ button { cursor: pointer; border: none; background: none; padding: 0; }
 @media (max-width: 840px) {
   .site-header { flex-direction: column; align-items: flex-start; }
   .brand-word  { font-size: 2rem; }
-  .champion-strip,
+  .champion-strip { flex-direction: column; align-items: stretch; }
+  .champion-card.rank-1,
+  .champion-card.rank-2,
+  .champion-card.rank-3 { order: unset; padding-bottom: 18px; }
   .toolbar-card,
   .arena-layout,
   .board-layout  { grid-template-columns: 1fr; }

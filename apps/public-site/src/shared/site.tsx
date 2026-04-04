@@ -113,7 +113,7 @@ export function HexToken({
   return (
     <span className={`hex-badge${className ? ` ${className}` : ""}`}>
       <svg viewBox="0 0 56 48" className="hex-badge-bg" aria-hidden="true">
-        <polygon points="14,2 42,2 55,24 42,46 14,46 1,24" />
+        <polygon points="54,24 41,1.5 15,1.5 2,24 15,46.5 41,46.5" />
       </svg>
       {children ? <span className="hex-badge-label">{children}</span> : null}
     </span>
