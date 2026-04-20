@@ -4,12 +4,29 @@ import type { Filters } from "../lib/benchmarks.js";
 export type PublicSitePage = "leaderboard" | "latency" | "methodology" | "rulebook" | "play";
 
 const PAGE_PATHS: Record<PublicSitePage, string> = {
-  leaderboard: "/index.html",
-  latency: "/latency.html",
-  methodology: "/methodology.html",
-  rulebook: "/rulebook.html",
-  play: "/play.html"
+  leaderboard: "/",
+  latency: "/latency/",
+  methodology: "/methodology/",
+  rulebook: "/rulebook/",
+  play: "/play/"
 };
+
+function normalizePagePath(pathname: string): string {
+  if (!pathname) return "/";
+
+  let normalized = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  normalized = normalized.replace(/\/index\.html$/, "/");
+
+  if (normalized !== "/" && normalized.endsWith(".html")) {
+    normalized = normalized.replace(/\.html$/, "/");
+  }
+
+  if (normalized !== "/" && !normalized.endsWith("/")) {
+    normalized = `${normalized}/`;
+  }
+
+  return normalized;
+}
 
 export function fixed(value: number): string {
   return value.toFixed(1);
@@ -65,7 +82,7 @@ export function readFilters(): Filters {
 }
 
 export function readPageFromLocation(): PublicSitePage {
-  const pathname = window.location.pathname;
+  const pathname = normalizePagePath(window.location.pathname);
   const matchedPage = (Object.entries(PAGE_PATHS) as Array<[PublicSitePage, string]>).find(([, pagePath]) => pagePath === pathname)?.[0];
   if (matchedPage) {
     return matchedPage;

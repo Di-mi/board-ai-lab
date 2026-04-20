@@ -8,10 +8,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         leaderboard: path.resolve(__dirname, "index.html"),
-        latency: path.resolve(__dirname, "latency.html"),
-        play: path.resolve(__dirname, "play.html"),
-        methodology: path.resolve(__dirname, "methodology.html"),
-        rulebook: path.resolve(__dirname, "rulebook.html")
+        latency: path.resolve(__dirname, "latency/index.html"),
+        play: path.resolve(__dirname, "play/index.html"),
+        methodology: path.resolve(__dirname, "methodology/index.html"),
+        rulebook: path.resolve(__dirname, "rulebook/index.html"),
+        latencyLegacy: path.resolve(__dirname, "latency.html"),
+        playLegacy: path.resolve(__dirname, "play.html"),
+        methodologyLegacy: path.resolve(__dirname, "methodology.html"),
+        rulebookLegacy: path.resolve(__dirname, "rulebook.html")
       }
     }
   },

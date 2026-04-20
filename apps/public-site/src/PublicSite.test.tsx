@@ -91,15 +91,27 @@ describe("PublicSite", () => {
 
     expect(container.querySelector("h1")?.textContent).toContain("Leaderboard");
 
-    const selects = container.querySelectorAll("select");
-    const difficultySelect = selects[1] as HTMLSelectElement;
-    const modelSelect = selects[2] as HTMLSelectElement;
+    const filterButtons = container.querySelectorAll('button[aria-haspopup="listbox"]');
+    const difficultyButton = filterButtons[1] as HTMLButtonElement | undefined;
+    const modelButton = filterButtons[2] as HTMLButtonElement | undefined;
 
     act(() => {
-      difficultySelect.value = "hard";
-      difficultySelect.dispatchEvent(new Event("change", { bubbles: true }));
-      modelSelect.value = "anthropic/claude-opus-4.6";
-      modelSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      difficultyButton?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    const hardOption = Array.from(container.querySelectorAll('[role="option"]')).find((option) => option.textContent?.trim() === "Hard");
+
+    act(() => {
+      hardOption?.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+      modelButton?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    const modelOption = Array.from(container.querySelectorAll('[role="option"]')).find((option) =>
+      option.textContent?.trim() === "Anthropic Claude Opus 4.6"
+    );
+
+    act(() => {
+      modelOption?.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
     });
 
     expect(container.querySelectorAll("tbody tr")).toHaveLength(1);
