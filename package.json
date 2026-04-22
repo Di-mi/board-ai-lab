@@ -16,7 +16,12 @@
     "llm-match": "pnpm --filter @board-ai-lab/benchmark-cli llm-match",
     "report": "pnpm --filter @board-ai-lab/benchmark-cli report",
     "record-human-result": "pnpm --filter @board-ai-lab/benchmark-cli record-human-result",
-    "export-public-site": "pnpm --filter @board-ai-lab/benchmark-cli export-public-site"
+    "export-public-site": "pnpm --filter @board-ai-lab/benchmark-cli export-public-site",
+    "bench:model": "bash ./scripts/run-public-model-benchmarks.sh",
+    "bench:model:full": "bash ./scripts/run-public-model-full-sweep.sh",
+    "bench:opus-4.7": "MODEL_ID=anthropic/claude-opus-4.7 bash ./scripts/run-public-model-benchmarks.sh",
+    "bench:opus-4.7:export": "MODEL_ID=anthropic/claude-opus-4.7 EXPORT_PUBLIC_SITE=1 bash ./scripts/run-public-model-benchmarks.sh",
+    "bench:opus-4.7:full": "MODEL_ID=anthropic/claude-opus-4.7 bash ./scripts/run-public-model-full-sweep.sh"
   },
   "devDependencies": {
     "@types/node": "^22.13.11",

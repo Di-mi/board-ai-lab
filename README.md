@@ -44,9 +44,28 @@ pnpm hive-train
 pnpm benchmark
 pnpm llm-match
 pnpm hive-llm-match
+pnpm bench:model -- openrouter/provider-model
+pnpm bench:opus-4.7
 pnpm report
 pnpm export-public-site
 ```
+
+`pnpm bench:model -- <model-id>` runs both public-game LLM benchmarks for the same OpenRouter model id:
+
+- Onitama via `pnpm llm-match`
+- Hive via `pnpm hive-llm-match`
+
+Example:
+
+```bash
+OPENROUTER_API_KEY=... pnpm bench:model -- anthropic/claude-opus-4.7
+OPENROUTER_API_KEY=... pnpm bench:opus-4.7
+```
+
+Optional toggles:
+
+- `DRY_RUN=1` prints the exact commands without executing them
+- `EXPORT_PUBLIC_SITE=1` runs `pnpm export-public-site` after both games finish
 
 ## Public Site Publish Flow
 
