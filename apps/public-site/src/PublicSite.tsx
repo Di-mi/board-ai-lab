@@ -1,4 +1,5 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
+import { trackBenchmarkDataError, trackBenchmarkDataLoaded, trackSiteNavigation } from "./lib/analytics.js";
 import type { Filters, PublicBenchmarks } from "./lib/benchmarks.js";
 import { LeaderboardPage, LatencyPage } from "./pages/leaderboard.js";
 import { PlayPage } from "./pages/play.js";
@@ -311,6 +312,7 @@ export function SiteView({ page, data }: { page: PublicSitePage; data: PublicBen
   }, [currentPage]);
 
   function navigate(targetPage: PublicSitePage) {
+    trackSiteNavigation(currentPage, targetPage);
     history.pushState({}, "", pageHref(targetPage, filters));
     setCurrentPage(targetPage);
   }
@@ -347,8 +349,15 @@ export function SiteLoader({ page }: { page?: PublicSitePage }) {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json() as Promise<PublicBenchmarks>;
       })
-      .then(setData)
-      .catch((caughtError: unknown) => setError(String(caughtError)));
+      .then((benchmarkData) => {
+        setData(benchmarkData);
+        trackBenchmarkDataLoaded(benchmarkData.siteName, benchmarkData.games.length, benchmarkData.records.length);
+      })
+      .catch((caughtError: unknown) => {
+        const message = String(caughtError);
+        setError(message);
+        trackBenchmarkDataError(message);
+      });
   }, []);
 
   useEffect(() => {
@@ -377,6 +386,7 @@ export function SiteLoader({ page }: { page?: PublicSitePage }) {
   }, [currentPage]);
 
   function navigate(targetPage: PublicSitePage) {
+    trackSiteNavigation(currentPage, targetPage);
     history.pushState({}, "", pageHref(targetPage, filters));
     setCurrentPage(targetPage);
   }

@@ -1,4 +1,5 @@
 import { StrictMode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { createRoot } from "react-dom/client";
 import { SiteLoader, type PublicSitePage } from "./PublicSite.js";
 import "./styles.css";
@@ -12,6 +13,7 @@ export function renderPage(page?: PublicSitePage): void {
   createRoot(root).render(
     <StrictMode>
       <SiteLoader page={page} />
+      <Analytics />
     </StrictMode>
   );
 }

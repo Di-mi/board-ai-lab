@@ -32,6 +32,17 @@ import {
 } from "@board-ai-lab/onitama-play";
 import { CARD_DEFINITIONS, type CardId, type GameState, type Move, type Player } from "@board-ai-lab/onitama-engine";
 import type { PublicBenchmarks } from "../lib/benchmarks.js";
+import {
+  trackHiveMove,
+  trackHiveReserveSelected,
+  trackOnitamaCardSelected,
+  trackOnitamaMove,
+  trackPlayDifficultyChanged,
+  trackPlayGameSelected,
+  trackPlayMatchEnded,
+  trackPlayMatchStarted,
+  trackPlaySideChanged
+} from "../lib/analytics.js";
 
 const HIVE_HEX_WIDTH = 96;
 const HIVE_HEX_HEIGHT = 84;
@@ -434,6 +445,10 @@ function OnitamaArena() {
   }, [legalMoves, selectedCard, selectedFrom]);
 
   function resetMatch(nextDifficulty = difficultyId): void {
+    if (nextDifficulty !== difficultyId) {
+      trackPlayDifficultyChanged("onitama", nextDifficulty);
+    }
+    trackPlayMatchStarted("onitama", nextDifficulty, humanSide);
     setDifficultyId(nextDifficulty);
     setState(makeInitialState());
     setSelectedCard(null);
@@ -444,11 +459,15 @@ function OnitamaArena() {
 
   function applyMove(move: Move): void {
     const next = onitamaEngine.applyMove(state, move);
+    if (state.currentPlayer === humanSide) {
+      trackOnitamaMove(move, state.turn, humanSide);
+    }
     setState(next);
     setSelectedCard(null);
     setSelectedFrom(null);
     if (next.winner) {
       const humanWon = next.winner === humanSide;
+      trackPlayMatchEnded("onitama", next.winner, humanWon, next.turn);
       setStatus(humanWon ? "🎉 You win!" : "Bot wins.");
       if (humanWon) setShowConfetti(true);
       return;
@@ -544,7 +563,11 @@ function OnitamaArena() {
                 perspective={humanSide}
                 selected={selectedCard === card}
                 disabled={!isHumanTurn}
-                onClick={() => setSelectedCard((previous) => (previous === card ? null : card))}
+                onClick={() => {
+                  const selected = selectedCard !== card;
+                  trackOnitamaCardSelected(card, selected);
+                  setSelectedCard(selected ? card : null);
+                }}
               />
             ))}
           </section>
@@ -632,6 +655,13 @@ function HiveArena() {
   }
 
   function resetGame(nextHumanSide = humanSide, nextDifficulty = difficultyId) {
+    if (nextHumanSide !== humanSide) {
+      trackPlaySideChanged("hive", nextHumanSide);
+    }
+    if (nextDifficulty !== difficultyId) {
+      trackPlayDifficultyChanged("hive", nextDifficulty);
+    }
+    trackPlayMatchStarted("hive", nextDifficulty, nextHumanSide);
     setState(makeInitialHiveState(77));
     setSelectedReserve(null);
     setSelectedHex(null);
@@ -642,11 +672,15 @@ function HiveArena() {
 
   function applyHiveMove(move: HiveMove) {
     const next = hiveEngine.applyMove(state, move);
+    if (state.currentPlayer === humanSide) {
+      trackHiveMove(move, state.turn, humanSide);
+    }
     setState(next);
     setSelectedReserve(null);
     setSelectedHex(null);
     setHistory((previous) => [...previous, `${HIVE_PLAYER_LABELS[state.currentPlayer]}: ${describeHiveMove(move)}`]);
     if (next.winner) {
+      trackPlayMatchEnded("hive", next.winner, next.winner === humanSide, next.turn);
       setStatus(hiveWinnerLabel(next.winner));
       return;
     }
@@ -777,9 +811,11 @@ function HiveArena() {
                     className={`hive-reserve-item hive-reserve-${bug} ${selectedReserve === bug ? "active" : ""}`.trim()}
                     disabled={!isHumanTurn || available === 0 || !canPlace}
                     onClick={() => {
+                      const selected = selectedReserve !== bug;
+                      trackHiveReserveSelected(bug, selected);
                       setSelectedHex(null);
-                      setSelectedReserve((current) => (current === bug ? null : bug));
-                      setStatus(`Selected ${HIVE_BUG_LABELS[bug]}. Choose a highlighted placement hex.`);
+                      setSelectedReserve(selected ? bug : null);
+                      setStatus(selected ? `Selected ${HIVE_BUG_LABELS[bug]}. Choose a highlighted placement hex.` : "Place a piece from your reserve.");
                     }}
                   >
                     <span className="hive-reserve-main">
@@ -908,7 +944,10 @@ export function PlayPage({ data }: { data: PublicBenchmarks }) {
                 role="tab"
                 aria-selected={activeGameId === game.id}
                 className={`game-switcher-tab${activeGameId === game.id ? " active" : ""}`}
-                onClick={() => setActiveGameId(game.id)}
+                onClick={() => {
+                  trackPlayGameSelected(game.id);
+                  setActiveGameId(game.id);
+                }}
               >
                 <span className="game-switcher-name">{game.label}</span>
                 <span className="game-switcher-hint">{game.id === "hive" ? "Hex strategy" : "5×5 tactics"}</span>
